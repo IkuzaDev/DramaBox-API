@@ -27,7 +27,9 @@ export const getToken = async () => {
     };
     
     const res = await axios.post(url, data, { headers })
-
+    if(!res.data?.data?.user){
+      return getToken();
+    }
     const tokenData = {
       token: res.data.data.user.token,
       deviceId,
@@ -36,7 +38,7 @@ export const getToken = async () => {
 
     return tokenData;
   } catch (error) {
-    console.error("[ERROR] Gagal mengambil token:", error.message);
+    console.error("[ERROR] Gagal mengambil token:", error);
     throw error;
   }
 };
