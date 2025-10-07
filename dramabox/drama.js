@@ -59,5 +59,5 @@ export const getRecommendedBooks = async (log = false) => {
         });
     }
 
-    return uniqueList;
+    return rawList;
 };
