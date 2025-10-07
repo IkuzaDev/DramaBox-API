@@ -31,15 +31,13 @@ export const getBookFromCategories = async (typeTwoId = 0, pageNo = 1) => {
 }
 
 export const getRecommendedBooks = async (log = false) => {
-    const data = await apiRequest("/drama-box/he001/recommendBook", {
-        isNeedRank: 1,
-        newChannelStyle: 1,
-        specialColumnId: 0,
-        pageNo: 2,
-        channelId: 43
-    });
+    const data = await apiRequest("/webfic/home/browse", {
+        typeTwoId,
+        pageNo,
+        pageSize: 10
+    }, true);
 
-    const rawList = data?.data?.recommendList?.records || [];
+    const rawList = data?.data?.recommends || [];
 
     // 🔥 Flatten: kalau cardType = 3 (tagCardVo), ambil tagBooks-nya
     const list = rawList.flatMap(item => {
