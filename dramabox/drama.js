@@ -32,8 +32,8 @@ export const getBookFromCategories = async (typeTwoId = 0, pageNo = 1) => {
 
 export const getRecommendedBooks = async (log = false) => {
     const data = await apiRequest("/webfic/home/browse", {
-        typeTwoId,
-        pageNo,
+        typeTwoId: 0,
+        pageNo: 1,
         pageSize: 10
     }, true);
 
