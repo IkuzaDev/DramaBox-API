@@ -84,8 +84,7 @@ export const getHeaders = async () => {
     "sn": "JFDUEtrtmKvfdRvfxSLxwYXH7a9NzzY41ztJtUL3K2tyW/TeTQXUsA0t40H9OmhbJjN32YozxnqwYYaeeMTBAi67Du21y+QB4EHB41fujZfBChSFRQS7QIViKjvPCzr0yDwqgyRS1nYiRAh4JV3Rqn8PwD0+VGuakQapgC85QHNDmBNtVb1dD0XGVjevb6iR9tB4AzYlWB3yG0D2iXJbSB40E6zEblQ/2FG3g9vj+hEz6SzVHYSs+PJAN12bLjl7N8/YxbejGGZd82NMhxEwJIXcgauKaeFrj2X2NvC6fT4jw6ZrCsh6SBxo2YG25K3fFnJBxwMbJWAHbU3PqjlrGg==",
     "content-type": "application/json; charset=UTF-8",
     "accept-encoding": "gzip",
-    "user-agent": "okhttp/4.10.0",
-    attributionPubParam
+    "user-agent": "okhttp/4.10.0"
   };
 };
 
