@@ -16,7 +16,7 @@ export const apiRequest = async (endpoint, payload = {}, isDb2 = false, method =
             return data;
         }
         const headers = await getHeaders();
-        const url = `https://sapi.dramaboxdb.com${endpoint}`;
+        const url = `https://sapi.dramaboxdb.com${endpoint}?timestamp=1759989761994`;
         const { data } = await axios[method](url, payload, { headers });
         return data;
     } catch (err) {
