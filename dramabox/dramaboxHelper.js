@@ -2,37 +2,6 @@ import axios from "axios";
 import fetch from "node-fetch";
 import { v4 as uuidv4 } from "uuid";
 
-function generateTimestamp() {
-  return Date.now();
-}
-
-function generateLocalTime() {
-  const now = new Date();
-  const offsetMinutes = -now.getTimezoneOffset();
-  const sign = offsetMinutes >= 0 ? "+" : "-";
-  const pad = (n) => String(Math.floor(Math.abs(n))).padStart(2, "0");
-  const hours = pad(offsetMinutes / 60);
-  const minutes = pad(offsetMinutes % 60);
-  const tz = `${sign}${hours}${minutes}`;
-  return `${now.toISOString().replace("T", " ").replace("Z", "")} ${tz}`;
-}
-
-function randomUUID() {
-  return crypto.randomUUID();
-}
-
-function randomAndroidId() {
-  return "ffffffff" + crypto.randomBytes(4).toString("hex") + "000000000";
-}
-
-function randomAfid() {
-  return `${Date.now()}-${BigInt(Math.floor(Math.random() * 10 ** 18)).toString()}`;
-}
-
-function fakeSN() {
-  return crypto.randomBytes(256).toString("base64");
-}
-
 export const getToken = async () => {
  
 };
