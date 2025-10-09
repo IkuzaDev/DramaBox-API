@@ -1,8 +1,6 @@
 import axios from "axios";
 import fetch from "node-fetch";
 import { v4 as uuidv4 } from "uuid";
-import crypto from "crypto";
-import { DramaboxApp } from "./sign.js";
 
 function generateTimestamp() {
   return Date.now();
